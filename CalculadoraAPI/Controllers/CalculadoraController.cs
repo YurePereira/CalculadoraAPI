@@ -81,7 +81,7 @@ namespace CalculadoraAPI.Controllers
         /// <param name="aditivo"></param>
         /// <returns></returns>
         [HttpPost("divisao")]
-        public IEnumerable<Object> Multiplicacao([FromBody] Dividendo dividendo)
+        public IEnumerable<Object> Divisao([FromBody] Dividendo dividendo)
         {
 
             var result = dividendo.dividendo / dividendo.divisor;
