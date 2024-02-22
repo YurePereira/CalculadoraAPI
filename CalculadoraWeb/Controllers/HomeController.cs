@@ -22,13 +22,16 @@ namespace CalculadoraWeb.Controllers
         public async Task<IActionResult> Index([FromServices] ICalculadoraRepository repository)
         {
 
-            Parcela parcela = new Parcela();
-            parcela.parcela1 = 10;
-            parcela.parcela2 = 10;
+            Parcela parcela = new Parcela
+            {
+                parcela1 = 10,
+                parcela2 = 100
+            };
 
             var soma = await repository.Adicao(parcela);
 
             return View();
+
         }
 
         public IActionResult Privacy()
