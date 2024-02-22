@@ -12,16 +12,16 @@ namespace CalculadoraWeb.Repositories.Interfaces
     {
 
 		[Post("/api/calculadora/adicao")]
-		Task<IEnumerable<Object>> Adicao([FromBody] Parcela parcela);
+		Task<IEnumerable<Resultado>> Adicao([FromBody] Parcela parcela);
 
 		[Post("/api/calculadora/subtracao")]
-		Task<IEnumerable<Object>> Subtracao([FromBody] Aditivo aditivo);
+		Task<IEnumerable<Resultado>> Subtracao([FromBody] Aditivo aditivo);
 
 		[Post("/api/calculadora/multiplicacao")]
-		Task<IEnumerable<Object>> Multiplicacao([FromBody] Fator fator);
+		Task<IEnumerable<Resultado>> Multiplicacao([FromBody] Fator fator);
 
 		[Post("/api/calculadora/divisao")]
-		Task<IEnumerable<Object>> Divisao([FromBody] Dividendo dividendo);
+		Task<IEnumerable<Resultado>> Divisao([FromBody] Dividendo dividendo);
 
 	}
 }
